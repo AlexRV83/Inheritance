@@ -1,4 +1,4 @@
-package ru.netology.product;
+package ru.netology.manager;
 
 import ru.netology.domain.Book;
 import ru.netology.domain.Product;
@@ -32,7 +32,7 @@ public class ProductManager {
     public boolean matches(Product product, String search) {
         if (product instanceof Book) {
             Book book = (Book) product;
-            if (book.getName().equalsIgnoreCase(search)) {
+            if (book.getName().contains(search)) {
                 return true;
             }
             if (book.getAuthor().equalsIgnoreCase(search)) {
