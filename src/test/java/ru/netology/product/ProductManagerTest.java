@@ -16,7 +16,7 @@ class ProductManagerTest {
     Book book1 = new Book(1, "Книга1", 300, "Автор1");
     Book book2 = new Book(2, "Книга2", 400, "Автор2");
     Book book3 = new Book(3, "Книга3", 500, "Автор3");
-    Smartphone phone1 = new Smartphone(4, "Motorola g9", 17000, "Motorola");
+    Smartphone phone1 = new Smartphone(4, "g9", 17000, "Motorola");
     Smartphone phone2 = new Smartphone(5, "Honor 20", 20000, "Honor");
     Smartphone phone3 = new Smartphone(6, "Samsung s21", 30000, "Samsung");
 
@@ -73,27 +73,28 @@ class ProductManagerTest {
 
     @Test
     void shouldNotFindSmartphoneByNameIfNoExists() {
-        String textToFind = "Alcatel";
+        String textToFind = "Alcatel 1";
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(textToFind);
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    void shouldFindSmartphoneByProducerIfExists() {
-        String textToFind = "Honor";
-        Product[] expected = new Product[]{phone2};
+    void shouldFindSmartphoneByManufacturerIfExists() {
+        String textToFind = "Motorola";
+        Product[] expected = new Product[]{phone1};
         Product[] actual = manager.searchBy(textToFind);
         assertArrayEquals(expected, actual);
     }
 
     @Test
-    void shouldNotFindSmartphoneByProducerIfNoExists() {
+    void shouldNotFindSmartphoneByManufacturerIfNoExists() {
         String textToFind = "Xiaomi";
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(textToFind);
         assertArrayEquals(expected, actual);
     }
+
 
     @Test
     public void shouldSearchByWhenMissingProduct() {
