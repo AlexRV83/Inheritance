@@ -54,11 +54,8 @@
                     </execution>
                     <execution>
                         <id>check</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
+                             <phase>verify</phase>  
+                   </execution>
                 </executions>
                 <configuration>
                     <rules>
