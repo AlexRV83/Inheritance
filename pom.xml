@@ -55,11 +55,6 @@
                     <execution>
                         <id>check</id>
                         <phase>verify</phase>
-<<<<<<< HEAD
-
-=======
-                       
->>>>>>> 87292870d922708bfacce59d17541995e989d33e
                     </execution>
                 </executions>
                 <configuration>
@@ -81,5 +76,5 @@
 </project>
 <<<<<<< HEAD
 
-=======
->>>>>>> 87292870d922708bfacce59d17541995e989d33e
+        =======
+        >>>>>>> 87292870d922708bfacce59d17541995e989d33e
