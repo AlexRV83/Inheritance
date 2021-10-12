@@ -52,10 +52,6 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>check</id>
-                        <phase>verify</phase>
-                    </execution>
                 </executions>
                 <configuration>
                     <rules>
